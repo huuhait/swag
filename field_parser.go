@@ -520,7 +520,7 @@ func (ps *tagBaseFieldParser) IsRequired() (bool, error) {
 
 	validateTag := ps.tag.Get(validateTag)
 	if validateTag != "" {
-		for _, val := range strings.Split(validateTag, ",") {
+		for _, val := range strings.Split(validateTag, "|") {
 			switch val {
 			case requiredLabel:
 				return true, nil
